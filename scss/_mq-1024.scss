@@ -1,0 +1,64 @@
+/* ------------------------------- Media query >1024px ------------------------------- */
+/* ------------------------------- Media query >1024px ------------------------------- */
+
+@media screen and (min-width:1024px) {
+
+    .body_aside{
+        grid-template-areas:
+            "header header header"
+            "aside1 main aside2"
+            "footer footer footer";
+        justify-content: stretch;
+        align-items: center;
+    }
+
+    .body_aside1{
+        grid-template-areas:
+            "header header header"
+            "asidea main asideb"
+            "footer footer footer";
+    }
+
+    /* ---Estilo del Main Contacto--- */
+
+    .main_contacto{
+        margin-left: $pxsize*2;
+        text-align: left;
+    }
+
+    .contacto_forms{
+        align-items: flex-start;
+    }
+    .contacto_img{
+        width: 340px;
+        margin-right: $pxsize*2;
+    }
+
+    .contacto_info{
+        flex-flow: row-reverse wrap;
+        justify-content:space-between;
+    }
+
+    .p_reserva{
+        width: 35vw;
+    }
+
+    .contacto_formulario{
+        align-items: flex-start;
+    }
+
+    .contacto_formulario_box{
+        width: 35vw;
+    }
+    
+    .aside1{
+        transform: rotate(0deg);
+        justify-self: auto;
+    }
+    
+    .aside2{
+        justify-self: right;
+        transform: rotate(0deg);
+    }
+
+}

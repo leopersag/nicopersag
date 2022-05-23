@@ -1,0 +1,10 @@
+/* ------------------------------- Estilo del nav ---------------------------- */
+
+header{
+    grid-area:header;
+    top: 0px;
+    margin: 0px $separacion;
+    div{
+        @include display_format2;
+    }
+}

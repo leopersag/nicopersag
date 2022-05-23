@@ -1,0 +1,39 @@
+/* ------------------------------- Estilo del Aside ------------------------------- */
+
+.aside1{
+    grid-area: aside1;
+    margin: $pxsize 0px $pxsize $separacion;
+    transform: rotate(90deg);
+    justify-self: center;
+}
+.aside2{
+    grid-area: aside2;
+    margin: $pxsize $separacion $pxsize 0px;
+    transform: rotate(90deg);
+    justify-self: center;
+}
+
+.aside_foto{
+    width: 10vw;
+    max-width: 150px;
+    animation-name: aparicion;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+$j:-1;
+@keyframes aparicion{
+    @for $i from 0% through 100%{
+        $j:$j+1;
+        @if $i < 51% {
+            #{$i} {
+                opacity:0.02*$j;
+            }
+        }@else{
+            #{$i} {
+                opacity:2-(0.02*$j);
+            }
+        }
+    }
+}

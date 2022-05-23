@@ -1,0 +1,142 @@
+/* ------------------------------- Media query >768px ------------------------------- */
+/* ------------------------------- Media query >768px ------------------------------- */
+
+@media screen and (min-width:768px){
+
+    .body_aside1{
+        grid-template-areas:
+            "header header header"
+            "asidea main asideb"
+            "footer footer footer";
+        justify-content: stretch;
+        align-items: center;
+    }
+
+    .body_naside{
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "footer footer footer";
+    }
+    
+    /* ---Estilo del nav--- */
+
+    header{
+        div{
+            flex-flow: row wrap;
+        }
+    }
+
+    nav{
+        div{
+            ul{
+                li{
+                    margin: 0px;
+                    padding: $pxsize*2;
+                }
+            }
+        } 
+    }
+
+    /* ---Estilo del Main--- */
+
+    main a:hover{
+        text-decoration: underline;
+    }
+    
+
+    /* ---Estilo del main bio--- */
+
+    #Nico_foto{
+        width: 30vw;
+        max-width: 350px;
+        margin: 0px 2vw;
+    }
+
+    .parrafo{
+        margin: $pxsize*2 0px $pxsize*4 0px;
+    }
+
+    .bio_parrafo{
+        width: 50vw;
+        margin: $pxsize*2 $pxsize*6 $pxsize*4 $pxsize*6;
+    }
+
+    .bio_intro{
+        width: 90vw;
+        flex-flow: row wrap;
+        justify-content:space-evenly;
+    }
+    
+    .bio_videos{
+        flex-flow: row wrap;
+    }
+
+    .bio_video{
+        margin: $pxsize*5;
+    }
+
+    .bio_video_vid{
+        width: 560px;
+        height: 315px;
+    }
+
+    /* ---Estilo del Main Fotos--- */
+
+    .fotos{
+        flex-flow: row wrap;
+        img{
+            width: auto;
+            height: 400px;
+        }
+    }
+
+    .fotos_item:hover{
+        position: relative;
+        top: 20px;
+    }
+
+    /* ---Estilo del Main Discografía--- */
+
+    .disco_indice{
+        text-align: left;
+        li{
+            list-style: inside;
+        }
+    }
+
+    .disco_titulo{
+        margin: 0px 0px $pxsize*3 $pxsize*6;
+    }
+
+    .disco_portada-temas{
+        flex-flow: row wrap;
+    }
+
+    .tabla_temas{
+        width: 60vw;
+        margin-bottom: 0px;
+    }
+
+    .inicio{
+        margin-top: $pxsize*4;
+    }
+
+    $asides: asidea, asideb;
+    @each $aside in $asides {
+        .#{$aside}{
+            grid-area: $aside;
+            transform: rotate(0deg);
+        }
+    }
+
+    /* ---Estilo del Footer--- */
+
+    footer{
+        div{
+            flex-flow: row wrap;
+            justify-content:flex-end;
+        }
+    } 
+
+}

@@ -1,0 +1,21 @@
+/* ------------------------------- Estilo del Footer ------------------------------- */
+footer{
+    grid-area:footer;
+    margin: 0px $separacion;
+    div{
+        @include display_format2;
+    }
+}
+
+.footer_derechos{
+    padding: 0px $pxsize*3;
+    margin: 0px;
+    font-size: 13px;
+    font-weight: 200;
+    color: #a3a3a3;
+}
+
+.footer_media_icon{
+    height: 30px;
+    margin:0px;
+}
